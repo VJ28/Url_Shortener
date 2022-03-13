@@ -27,8 +27,11 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 //Routes
-app.use("/", require("./routes/login"));
-app.use("/", require("./routes/shortUrlRouter"));
+// const loginRouter = require("./routes/login");
+// const shortUrlRouter = require("./routes/shortUrlRouter");
+
+app.use("/", loginRouter);
+app.use("/", shortUrlRouter);
 
 const PORT = process.env.PORT || 4111;
 
