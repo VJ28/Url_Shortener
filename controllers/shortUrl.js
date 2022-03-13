@@ -1,13 +1,5 @@
 const Url = require("../models").url;
 
-function getHash() {   
-  var text = '';    
-  var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-       for (var i = 0; i < 5; i++)        
-  text += possible.charAt(Math.floor(Math.random() * possible.length));    
-  return text;
-  }
-
 const getAllShortenedUrl = (req, res, next) => {
   console.log(req.user.id);
   Url.findAll({ where : { userId: req.user.id }})
@@ -17,7 +9,8 @@ const getAllShortenedUrl = (req, res, next) => {
 const getShortenedUrl = (req, res, next) => {
 
   const {url} = req.query;
-  const hash = getHash();
+  
+  const hash = ""; //generate  hash
   console.log(hash, req.user.id);
   Url.create({
     url,
