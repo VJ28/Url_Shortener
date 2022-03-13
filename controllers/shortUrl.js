@@ -10,7 +10,7 @@ const getShortenedUrl = (req, res, next) => {
 
   const {url} = req.query;
 
-  const hash = ""; //create a hash function and call it here to return hash
+  const hash = ""; //create a hash function above and call it here to return hash
   console.log(hash, req.user.id);
   Url.create({
     url,
