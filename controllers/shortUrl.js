@@ -9,8 +9,8 @@ const getAllShortenedUrl = (req, res, next) => {
 const getShortenedUrl = (req, res, next) => {
 
   const {url} = req.query;
-  
-  const hash = ""; //generate  hash
+
+  const hash = ""; //create a hash function and call it here to return hash
   console.log(hash, req.user.id);
   Url.create({
     url,
