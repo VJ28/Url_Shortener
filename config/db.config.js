@@ -1,8 +1,8 @@
 module.exports = {
     HOST: "localhost",
     USER: "root",
-    PASSWORD: "1234", // update the db password here
-    DB: "db_name", //add database name here
+    PASSWORD: "1234",
+    DB: "app1",
     dialect: "mysql",
     pool: {
       max: 5,
