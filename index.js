@@ -27,6 +27,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 //Routes
+// hint for integration
 // const loginRouter = require("./routes/login");
 // const shortUrlRouter = require("./routes/shortUrlRouter");
 
